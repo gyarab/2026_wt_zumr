@@ -17,34 +17,32 @@
             min-height: 80px;
         }
     </style>
-
 </head>
 <body>
 
-    <nav class="navbar md:navbar-expand bg_body_tertiary shadow sticky-top">
+    <nav class="navbar md:navbar-expand bg_body_tertiary">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#boxes">📦 Boxes</a>
+            <a class="navbar-brand" href="#">Home</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Otevřít menu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-                
             </button>
 
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#sluzby">Služby</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#galerie">Galerie</a></li>
-                    <li class="nav-item"><a class="nav-link" href="kontakty.html">Kontakt</a></li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Služby</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kontakt</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <!-- Úkol 7: pruhy podle šířky obrazovky -->
-    <div class="container mt-3">
-        <div class="alert theme-warning md:d-none" role="alert">📱 Jsi na mobilu</div>
-        <div class="alert theme-info d-none lg:d-block" role="alert">🖥️ Jsi na velkém displeji</div>
-    </div>
 
     <!-- Ukazatel aktuálního breakpointu (vpravo dole) -->
     <div class="position-fixed bottom-0 end-0 m-3 badge theme-inverse fs-md">
@@ -56,85 +54,31 @@
         <span class="d-none 2xl:d-inline">2XL ≥ 1536</span>
     </div>
 
-    <main id="boxes">
-        <!-- Hero: mobil pod sebou, od LG vedle sebe 1:1 -->
-        <section class="container my-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-12 lg:col-6 text-center lg:text-start">
-                    <h1 class="display-5 fw-bold">Boxes Experts</h1>
-                    <p class="lead">Levné, spolehlivé a pohodlé. Ty jsme my Boxes Experts</p>
-                    <a class="btn theme-primary btn-lg" href="#sluzby">Vybrat službu</a>
-                </div>
-                <div class="col-12 lg:col-6">
-                    <img src="img/hero.svg" class="img-fluid rounded shadow" alt="Stěhování krabicemi">
-                </div>
-            </div>
-        </section>
+    <div class="container">
+        <h1 class="my-5">Boxes</h1>
 
-        <!-- 3 karty služeb -->
-        <section id="sluzby" class="container my-5">
-            <h2 class="mb-4 text-center">Naše služby</h2>
-            <div class="row g-4">
-                <div class="col-12 md:col-4">
-                    <article class="card h-100 shadow rounded">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Krabice a balení</h3>
-                            <p class="card-text">Pečlivě zabalené věci bezpečně dorazí tam, kam mají.</p>
-                            <a href="#kontakt" class="card-link">Zjistit více</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12 md:col-4">
-                    <article class="card h-100 shadow rounded">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Stěhování</h3>
-                            <p class="card-text">Přesun domácnosti nebo firmy po dohodnutém harmonogramu.</p>
-                            <a href="#kontakt" class="card-link">Zjistit více</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12 md:col-4">
-                    <article class="card h-100 shadow rounded">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Skladování</h3>
-                            <p class="card-text">Většina věcí je na světě. My si o ně postaráme na skladech.</p>
-                            <a href="#kontakt" class="card-link">Zjistit více</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+        
+    </div>
+    <main>
 
-        <!-- Galerie: 2 / 3 / 4 obrázky vedle sebe -->
-        <section id="galerie" class="container my-5">
-            <h2 class="mb-4 text-center">Galerie</h2>
-            <div class="row g-3">
-                <div class="col-6 md:col-4 lg:col-3"><img src="img/box1.svg" class="ratio-1x1 object-fit-cover w-100 rounded" alt="Krabice 1"></div>
-                <div class="col-6 md:col-4 lg:col-3"><img src="img/box2.svg" class="ratio-1x1 object-fit-cover w-100 rounded" alt="Krabice 2"></div>
-                <div class="col-6 md:col-4 lg:col-3"><img src="img/box3.svg" class="ratio-1x1 object-fit-cover w-100 rounded" alt="Krabice 3"></div>
-                <div class="col-6 md:col-4 lg:col-3"><img src="img/box4.svg" class="ratio-1x1 object-fit-cover w-100 rounded" alt="Krabice 4"></div>
-                <div class="col-6 md:col-4 lg:col-3"><img src="img/box5.svg" class="ratio-1x1 object-fit-cover w-100 rounded" alt="Krabice 5"></div>
-                <div class="col-6 md:col-4 lg:col-3"><img src="img/box6.svg" class="ratio-1x1 object-fit-cover w-100 rounded" alt="Krabice 6"></div>
-                <div class="col-6 md:col-4 lg:col-3"><img src="img/box7.svg" class="ratio-1x1 object-fit-cover w-100 rounded" alt="Krabice 7"></div>
-                <div class="col-6 md:col-4 lg:col-3"><img src="img/box8.svg" class="ratio-1x1 object-fit-cover w-100 rounded" alt="Krabice 8"></div>
-            </div>
-        </section>
     </main>
+    <aside>
 
-    <!-- Patička -->
-    <footer id="kontakt" class="bg_body_tertiary mt-5 py-4">
-        <div class="container">
-            <div class="row g-3 align-items-center text-center md:text-start">
-                <div class="col-12 md:col-6">
-                    <strong>📦 Boxes</strong>
-                    <div>Spolehlivé balení i stěhování.</div>
-                </div>
-                <div class="col-12 md:col-6 text-center md:text-end">
-                    <a class="nav-link d-inline" href="mailto:info@boxes.cz">info@boxes.cz</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </aside>
+    <div class="krabice">bez kontejneru</div>
+    <div class="container"><div class="krabice">container</div></div>
+    <div class="container-fluid"><div class="krabice">container-fluid</div></div>
+
+    <div class="row g-5">
+        <div class="col-12 md:col-6 lg:col-4 krabice xl:col-3">1</div>
+        <div class="col-12 md:col-6 lg:col-4 krabice xl:col-3">2</div>
+        <div class="col-12 md:col-6 lg:col-4 krabice xl:col-3">3</div>
+        <div class="col-12 md:col-6 lg:col-4 krabice xl:col-3">4</div>
+        <div class="col-12 md:col-6 lg:col-4 krabice xl:col-3">5</div>
+        <div class="col-12 md:col-6 lg:col-4 krabice xl:col-3">6</div>
+        <div class="col-12 md:col-6 lg:col-4 krabice xl:col-3">7</div>
+        <div class="col-12 md:col-6 lg:col-4 krabice xl:col-3">8</div>
+    </div>
 
 
     <!-- Bootstrap 6 – JS (je to ES modul => type="module") -->
