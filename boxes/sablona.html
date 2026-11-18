@@ -17,6 +17,7 @@
             min-height: 80px;
         }
     </style>
+
 </head>
 <body>
 
@@ -38,6 +39,12 @@
             </div>
         </div>
     </nav>
+
+    <!-- Úkol 7: pruhy podle šířky obrazovky -->
+    <div class="container mt-3">
+        <div class="alert theme-warning md:d-none" role="alert">📱 Jsi na mobilu</div>
+        <div class="alert theme-info d-none lg:d-block" role="alert">🖥️ Jsi na velkém displeji</div>
+    </div>
 
     <!-- Ukazatel aktuálního breakpointu (vpravo dole) -->
     <div class="position-fixed bottom-0 end-0 m-3 badge theme-inverse fs-md">
