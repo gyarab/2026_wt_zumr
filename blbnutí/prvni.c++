@@ -1,7 +1,14 @@
 #include <iostream>
-using namespace std;    
+#pragma region 
+#include <string>
+using namespace std;
 
-int main() {
-    cout << "Hello, World!" << endl;
-    return 0;
+
+int main() 
+{
+    std::string name;
+    std::cout << "Enter your name: ";
+    std::getline(std::cin, name);
+    std::cout << "Hello, " << name << "!" << std::endl;
+
 }

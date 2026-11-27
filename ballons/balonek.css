@@ -1,0 +1,47 @@
+/* ===== PĚKNÉ BALÓNKY =====
+ * Z barevných čtverců udělá balónky s uzlíkem a provázkem.
+ * Použití: do <head> přidej řádek
+ *     <link rel="stylesheet" href="balonek.css">
+ * Barvu dál nastavuje JavaScript (style.backgroundColor), nic jiného se nemění.
+ */
+
+.plocha .balonek {
+    width: 3.5rem;
+    height: 4.4rem;
+    border-radius: 50% 50% 50% 50% / 45% 45% 55% 55%;   /* vodorovné / svislé poloměry rohů */
+    background-image: radial-gradient(circle at 30% 28%, rgb(255 255 255 / .6), transparent 35%);   /* odlesk */
+}
+
+/* uzlík = malý trojúhelník pod balónkem */
+.plocha .balonek::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    translate: -50% 0;
+    width: 12px;
+    height: 8px;
+    background: inherit;                              /* stejná barva jako balónek */
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+/* provázek */
+.plocha .balonek::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 2px);
+    width: 1px;
+    height: 2.5rem;
+    background: rgb(0 0 0 / .35);
+}
+
+/* obrázky (brouci) zůstanou obrázky: bez tvaru balónku, uzlíku a provázku */
+.plocha .balonek.obrazek {
+    height: 3.5rem;
+    border-radius: 0;
+}
+.plocha .balonek.obrazek::before,
+.plocha .balonek.obrazek::after {
+    display: none;
+}
